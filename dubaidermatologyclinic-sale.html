@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dubaidermatologyclinic.com — For Sale</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0B1829;
+    --navy-mid: #152540;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --white: #FFFFFF;
+    --offwhite: #F7F9FC;
+    --text-muted: #6B7A8D;
+    --green: #1A7F5A;
+    --border: #E2E8F0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--offwhite);
+    color: var(--navy);
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--navy);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-domain {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+  .nav-badge {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    padding: 80px 24px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero h1 span {
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.65);
+    max-width: 480px;
+    margin: 0 auto 48px;
+    font-weight: 300;
+  }
+
+  /* GOOGLE SIMULATION */
+  .google-sim {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 20px 24px;
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: left;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  .gsim-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding: 10px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 24px;
+  }
+  .gsim-search svg { flex-shrink: 0; }
+  .gsim-search span {
+    font-size: 15px;
+    color: #3C4043;
+    font-family: 'Inter', sans-serif;
+  }
+  .gsim-result {
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+  .gsim-result.top-result {
+    border-top: none;
+  }
+  .result-url {
+    font-size: 13px;
+    color: #1A0DAB;
+    margin-bottom: 3px;
+    font-weight: 500;
+  }
+  .result-title {
+    font-size: 17px;
+    color: #1A0DAB;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .result-desc {
+    font-size: 13px;
+    color: #4D5156;
+    line-height: 1.5;
+  }
+  .position-badge {
+    position: absolute;
+    right: 0; top: 12px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .result-blur .result-title,
+  .result-blur .result-url {
+    color: #9AA0A6;
+  }
+  .result-blur .result-desc {
+    color: #BDC1C6;
+  }
+
+  /* STATS STRIP */
+  .stats-strip {
+    background: var(--gold);
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .stat-item {
+    text-align: center;
+    padding: 8px 32px;
+    border-right: 1px solid rgba(11,24,41,0.2);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    display: block;
+  }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--navy);
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  /* SECTION */
+  section {
+    padding: 72px 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .section-body {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 580px;
+    line-height: 1.75;
+  }
+
+  /* BENEFITS */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .benefit-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 28px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(11,24,41,0.08);
+  }
+  .benefit-icon {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .benefit-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .benefit-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* FEAR SECTION */
+  .fear-section {
+    background: var(--navy);
+    padding: 72px 24px;
+  }
+  .fear-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .fear-section .section-title { color: var(--white); }
+  .fear-section .section-body { color: rgba(255,255,255,0.6); }
+  .fear-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .fear-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  .fear-dot {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+  .fear-text {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+  }
+
+  /* OFFER */
+  .offer-section {
+    background: var(--white);
+    padding: 72px 24px;
+  }
+  .offer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .offer-price-box {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    border-radius: 20px;
+    padding: 48px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .offer-price-box::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .offer-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+  .offer-domain {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 32px;
+    word-break: break-all;
+  }
+  .price-was {
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+  .price-now {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .price-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 32px;
+  }
+  .offer-btn {
+    display: block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+  }
+  .offer-btn:hover { background: var(--gold-light); }
+
+  .offer-details .section-eyebrow { margin-bottom: 12px; }
+  .offer-checklist {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--navy);
+    line-height: 1.5;
+  }
+  .check-icon {
+    width: 22px; height: 22px;
+    background: rgba(26,127,90,0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: var(--green);
+    font-weight: 700;
+    margin-top: 1px;
+  }
+  .urgency-bar {
+    margin-top: 32px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: #8B6914;
+    line-height: 1.5;
+  }
+  .urgency-bar strong { color: var(--navy); }
+
+  /* CONTACT */
+  .contact-section {
+    padding: 80px 24px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .contact-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 48px 40px;
+    margin-top: 40px;
+  }
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--offwhite);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  .contact-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .contact-icon.email { background: #EFF6FF; }
+  .contact-icon.whatsapp { background: #F0FFF4; }
+  .contact-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 3px;
+  }
+  .contact-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .contact-value a {
+    color: var(--navy);
+    text-decoration: none;
+  }
+  .contact-divider {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 8px 0 16px;
+  }
+  .whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 16px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+  .whatsapp-btn:hover { background: #1ebe5d; }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+  }
+  footer span { color: var(--gold); }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .offer-inner { grid-template-columns: 1fr; }
+    .stat-item { padding: 8px 20px; }
+    .price-now { font-size: 48px; }
+    .contact-card { padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-domain">dubaidermatologyclinic.com</div>
+  <div class="nav-badge">For Sale</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Premium Domain · Dubai Market</div>
+  <h1>Your Clinic Could Own<br><span>Google Search</span> in Dubai</h1>
+  <p class="hero-sub">The exact domain patients type when searching for a dermatologist in Dubai — available for one clinic only.</p>
+
+  <!-- Google Simulation -->
+  <div class="google-sim">
+    <div class="gsim-search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#9AA0A6" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>dubai dermatology clinic</span>
+    </div>
+    <div class="gsim-result top-result">
+      <div class="position-badge">🏆 #1 Result</div>
+      <div class="result-url">dubaidermatologyclinic.com</div>
+      <div class="result-title">Dubai Dermatology Clinic — Leading Skin Specialists</div>
+      <div class="result-desc">Expert dermatologists in Dubai. Book your appointment today. Trusted by thousands of patients across the UAE.</div>
+    </div>
+    <div class="gsim-result result-blur">
+      <div class="result-url">competitor-clinic.com</div>
+      <div class="result-title">Skin Care Center Dubai</div>
+      <div class="result-desc">General skin care services in Dubai...</div>
+    </div>
+    <div class="gsim-result result-blur">
+      <div class="result-url">anotherderma.ae</div>
+      <div class="result-title">Dermatology Services Dubai</div>
+      <div class="result-desc">Dermatology treatments and consultations...</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <span class="stat-num">$1,351</span>
+    <span class="stat-label">Avg. Market Value</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">$4,050</span>
+    <span class="stat-label">Top Sale Price</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">1</span>
+    <span class="stat-label">Clinic Can Own This</span>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section>
+  <div class="section-eyebrow">Why This Domain</div>
+  <h2 class="section-title">Three reasons this domain pays for itself</h2>
+  <p class="section-body">This is not just a web address. It is a permanent SEO asset that works for your clinic every single day.</p>
+
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">🎯</div>
+      <div class="benefit-title">Instant Authority</div>
+      <div class="benefit-desc">Patients searching "Dubai dermatology clinic" see your name before they click anything. Trust is established before they even reach your site.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">📈</div>
+      <div class="benefit-title">Free Organic Traffic</div>
+      <div class="benefit-desc">You permanently lock the exact search phrase patients use — cutting your Google Ads spend significantly every month.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🛡️</div>
+      <div class="benefit-title">Block Competitors</div>
+      <div class="benefit-desc">Once a competitor secures this domain, they gain a massive SEO advantage and you pay more per click for the same patients.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEAR -->
+<div class="fear-section">
+  <div class="fear-inner">
+    <div class="section-eyebrow">What Happens If You Wait</div>
+    <h2 class="section-title">One of your competitors is looking at this right now</h2>
+    <p class="section-body">We are offering this to one clinic in Dubai. The moment it's claimed, it's closed permanently.</p>
+    <div class="fear-list">
+      <div class="fear-item">
+        <div class="fear-dot"></div>
+        <div class="fear-text">A competing clinic owns the #1 keyword position in Dubai for dermatology — without spending on ads.</div>
+      </div>
+      <div class="fear-item">
+        <div class="fear-dot"></div>
+        <div class="fear-text">Patients searching specifically for "Dubai dermatology clinic" land on your competitor's page first, every time.</div>
+      </div>
+      <div class="fear-item">
+        <div class="fear-dot"></div>
+        <div class="fear-text">Your Google Ads cost per click increases because the organic position is already taken.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OFFER -->
+<div class="offer-section">
+  <div class="offer-inner">
+    <div class="offer-price-box">
+      <span class="offer-label">Exclusive Offer</span>
+      <div class="offer-domain">dubaidermatologyclinic.com</div>
+      <div class="price-was">Market value: $1,351</div>
+      <div class="price-now">$450</div>
+      <div class="price-note">One-time · Full ownership transfer</div>
+      <a href="https://wa.me/YOUR_NUMBER?text=Hi%2C%20I%27m%20interested%20in%20dubaidermatologyclinic.com" class="offer-btn">Secure This Domain →</a>
+    </div>
+
+    <div class="offer-details">
+      <div class="section-eyebrow">What's Included</div>
+      <h2 class="section-title">Simple. Secure. Done in 24 hours.</h2>
+      <div class="offer-checklist">
+        <div class="check-item">
+          <div class="check-icon">✓</div>
+          Full domain ownership transferred to your account
+        </div>
+        <div class="check-item">
+          <div class="check-icon">✓</div>
+          Secure transfer via Namecheap — no risk
+        </div>
+        <div class="check-item">
+          <div class="check-icon">✓</div>
+          Transfer completed within 24 hours of payment
+        </div>
+        <div class="check-item">
+          <div class="check-icon">✓</div>
+          No hidden fees, no annual obligation to us
+        </div>
+        <div class="check-item">
+          <div class="check-icon">✓</div>
+          Escrow payment option available on request
+        </div>
+      </div>
+      <div class="urgency-bar">
+        ⏳ <strong>This offer expires at the end of this week.</strong> After that, the domain goes to open marketplace bidding.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section">
+  <div class="section-eyebrow">Get in Touch</div>
+  <h2 class="section-title">Ready to secure it?</h2>
+  <p class="section-body">Reply within 24 hours and we handle everything. The transfer is simple and secure.</p>
+
+  <div class="contact-card">
+    <div class="contact-row">
+      <div class="contact-icon email">📧</div>
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value">
+          <a href="mailto:khaled@dubaidermatologyclinic.com">khaled@dubaidermatologyclinic.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-divider">or reach us instantly</div>
+
+    <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Khaled%2C%20I%27m%20interested%20in%20purchasing%20dubaidermatologyclinic.com%20for%20%24450" class="whatsapp-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Message on WhatsApp
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p><span>dubaidermatologyclinic.com</span> is privately owned and available for purchase. · 2025</p>
+</footer>
+
+</body>
+</html>
